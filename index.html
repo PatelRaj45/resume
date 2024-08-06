@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('star.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .content-wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <div class="navbar">
+        <div class="flex justify-between items-center p-4 bg-purple-900 fixed top-0 w-full z-50">
+            <div class="text-xl font-bold">My Portfolio</div>
+            <ul class="hidden md:flex space-x-6">
+                <li class="cursor-pointer" onclick="scrollToSection('aboutme')">About Me</li>
+                <li class="cursor-pointer" onclick="scrollToSection('education')">Education</li>
+                <li class="cursor-pointer" onclick="scrollToSection('skills')">Skills</li>
+                <li class="cursor-pointer" onclick="scrollToSection('projects')">Projects</li>
+                <li class="cursor-pointer" onclick="scrollToSection('contact')">Contact</li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-xl focus:outline-none">☰</button>
+            </div>
+        </div>
+        <div id="menu" class="hidden md:hidden flex flex-col space-y-4 p-4 bg-purple-900 fixed top-16 w-full z-50">
+            <li class="cursor-pointer" onclick="scrollToSection('aboutme')">About Me</li>
+            <li class="cursor-pointer" onclick="scrollToSection('education')">Education</li>
+            <li class="cursor-pointer" onclick="scrollToSection('skills')">Skills</li>
+            <li class="cursor-pointer" onclick="scrollToSection('projects')">Projects</li>
+            <li class="cursor-pointer" onclick="scrollToSection('contact')">Contact</li>
+        </div>
+    </div>
+    <div class="content-wrapper pt-20">
+        <div class="content max-w-4xl mx-auto px-4">
+            <div id="aboutme" class="aboutme mb-16">
+                <h1 class="text-3xl font-bold text-center m-10">Raj Patel</h1>
+                <p class="text-center m-10">
+                    Second-year Computer Engineering student at DJ Sanghvi College of Engineering with a strong foundation in 
+                    web development and programming. Skilled in HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and 
+                    Tailwind CSS, with hands-on experience in creating responsive web applications. Proven problem-solving 
+                    abilities demonstrated through active participation on platforms like HackerRank and CodeChef. Passionate 
+                    about leveraging technical skills to contribute to innovative projects.
+                </p>
+            </div>
+            <div id="education" class="education p-8 rounded-lg shadow-lg mb-16">
+                <h2 class="text-3xl font-bold text-center m-10">Education</h2>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">CAMBRIDGE SCHOOL (2021)</h3>
+                    <p>High School - SSC (94%)</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">NIRMALA MEMORIAL FOUNDATION COLLEGE OF SCIENCE AND COMMERCE (2021-23)</h3>
+                    <p>Junior College - HSC (77.7%)</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">JEE MAIN (2023)</h3>
+                    <p>94.86 Percentile</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">MHT-CET (2023)</h3>
+                    <p>98.85 Percentile</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold">DWARKADAS J. SANGHVI COLLEGE OF ENGINEERING (2027)</h3>
+                    <p>B.Tech in Computer Engineering</p>
+                    <p>First year CGPA- 9.14</p>
+                </div>
+            </div>
+            <div id="skills" class="skills p-8 rounded-lg shadow-lg mb-16">
+                <h2 class="text-3xl font-bold text-center m-10">Skills</h2>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Programming Languages:</h3>
+                    <p>JavaScript, C, Java</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Frontend Development:</h3>
+                    <p>HTML, CSS, Tailwind CSS</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Backend Development:</h3>
+                    <p>Node.js, Express.js</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Database Management:</h3>
+                    <p>MongoDB, Mongoose</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold">Problem Solving:</h3>
+                    <p>Experienced with solving problems on platforms like HackerRank and CodeChef.</p>
+                </div>
+            </div>
+            <div id="projects" class="projects p-8 rounded-lg shadow-lg mb-16">
+                <h2 class="text-3xl font-bold text-center m-10">Projects</h2>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Netflix Clone:</h3>
+                    <p><strong>Technologies Used:</strong> HTML, CSS</p>
+                    <p><strong>Description:</strong> Created a responsive clone of Netflix that works seamlessly on both desktop and mobile devices.</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">Spotify Clone:</h3>
+                    <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                    <p><strong>Description:</strong> Developed a responsive clone of Spotify with functionality and design optimized for mobile devices.</p>
+                </div>
+            </div>
+            <div id="contact" class="contact p-8 rounded-lg shadow-lg mb-16">
+                <h2 class="text-3xl font-bold text-center m-10">Contact Me</h2>
+                <div class="flex flex-col items-center">
+                    <p class="mb-4"><strong>Phone:</strong> 8591050015</p>
+                    <p class="mb-4"><strong>Email:</strong> <a href="mailto:rajbhaveshpatel1@gmail.com" class="text-purple-300 hover:underline">rajbhaveshpatel1@gmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/raj-patel" target="_blank" class="text-purple-300 hover:underline">linkedin.com/in/raj-patel</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
